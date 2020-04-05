@@ -1,0 +1,16 @@
+---
+layout : defaults
+---
+<h2>Collection</h2>
+<br>
+{% for post in site.posts%}
+<a href="{{ post.url | relative_url }}"><h3>{{ post.title }}</h3></a>
+{% endfor%}
+
+
+<style>
+    a{
+        text-decoration:none;
+
+    }
+</style>
