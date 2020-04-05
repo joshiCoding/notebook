@@ -1,0 +1,82 @@
+--- 
+# for jekyll use
+--- 
+
+//color
+$clr-prim : #448ac9;
+$clr-comp :#c97544 ;
+$clr-sec : #E5EFE2;
+
+
+$clr-font:#E5EFE2 ;
+
+//typography
+
+//global
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    color:$clr-font;
+    background:$clr-prim;
+}
+
+$padding-lr:20px;
+//for header
+header{
+    width:100vw;
+    height:80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 $padding-lr;
+    .logo{
+        font-size:32px;
+        font-weight:bold;
+
+        span{
+            background:$clr-comp;
+        }
+    }
+
+    nav{
+        .menu-bar{
+            transform:rotate(90deg);
+            font-size:25px;
+            font-weight:bolder;
+
+        }
+        .menu{
+            display:none;
+        }
+    }
+
+    
+}
+
+// for section
+section{
+    padding:$padding-lr*2 $padding-lr;
+    background:$clr-font;
+    color:$clr-prim;
+    min-height:50vh;
+    .title{
+        text-align:center;
+        font-size:2rem;
+    }
+}
+
+//for footer
+footer{
+    padding:$padding-lr;
+    line-height:1.5rem;
+    hr{
+        color:$clr-font;
+    }
+    p{
+        padding:$padding-lr/2;
+    }
+}
