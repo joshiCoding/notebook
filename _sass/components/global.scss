@@ -1,0 +1,24 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    list-style:none;
+
+}
+button{
+    border:none;
+    background:none;
+    color:currentColor;
+}
+a{
+    color:currentColor;
+    text-decoration:none;
+}
+body{
+    color:$clr-font;
+    font-family:sans-serif;
+}
+:root{
+    --head-height : 80px;
+}
+$padding-lr:20px;
