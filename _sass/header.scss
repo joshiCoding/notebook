@@ -1,0 +1,36 @@
+--- 
+
+--- 
+
+header{
+    width:100vw;
+    height:80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 $padding-lr;
+    .logo{
+        font-size:32px;
+        font-weight:bold;
+
+        span{
+            background:$clr-comp;
+            border-radius:5px;
+            padding-left:$padding-lr/2;
+        }
+    }
+
+    nav{
+        .menu-bar{
+            transform:rotate(90deg);
+            font-size:25px;
+            font-weight:bolder;
+
+        }
+        .menu{
+            display:none;
+        }
+    }
+
+    
+}
