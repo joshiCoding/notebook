@@ -1,51 +1,16 @@
----
-#for jekyll use only
----
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{page.title}}</title>
-<link rel="stylesheet" href="{{'assets/css/styles.css' | relative_url}}">
-
-
-</head>
+{% include head.html %}
 <body>
    <!-- for header -->
-   <header>
-        <div class="logo">
-            <span>Note</span>book.
-        </div>
-         <nav>  
-        <button class="menu-btn"><div class="menu-bar menu-bar-open"></div></button>
-        <ul class="menu">
-               <li class="item">Home</li>
-                <li class="item">All Categories</li>
-                <li class="item">About Project</li>
-                <li class="item">About Us</li>
-        </ul>
-        </nav>
-    </header>
-    <script src = "{{'assets/js/header.js' | relative_url}}"></script>
-
+   {% include header.html %}
+   
     <!-- for section -->
-    <section>
+   
        {{content}}
-    </section>
+  
 
     <!-- for footer -->
-    <footer>
-        <hr>
-        <p>{{site.title}} <br>
-        {{site.email}}</p>
-        <p>Twitter : {{site.twitter_username}} <br>
-        Github : {{site.github_username}}</p>
-        <p>
-            The site was created as a part of experiment to learn static site generator like jekyll and sum up the knowledge of web-develpment till now.
-        </p>
-    </footer>
+    {% include footer.html %}
 </body>
 </html>

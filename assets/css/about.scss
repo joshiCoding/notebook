@@ -1,0 +1,31 @@
+--- 
+--- 
+
+
+ 
+@import "main";
+
+section{
+    color:$clr-font-dark;
+    padding:$padding-lr;
+    .heading,
+    .subheading{
+        color:$clr-prim;
+        padding:$padding-lr/2 0;
+    }
+    .heading{
+        font-size:1.7rem;
+        text-align:center;
+    }
+    .subheading{
+        font-size:1.3rem;
+        color:$clr-comp-warm;
+    }
+    p{
+        padding:$padding-lr/2 0;
+        span{
+            color:$clr-warning;
+        }
+    }
+    
+}
