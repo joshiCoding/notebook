@@ -4,6 +4,7 @@ section{
     padding:$padding-lr*2 $padding-lr;
     background:$clr-font;
     color:#2e2e2e;
+    width:100vw;
     min-height:calc(100vh - var(--head-height));
     .heading{
         text-align:left;

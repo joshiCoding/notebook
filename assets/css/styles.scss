@@ -34,13 +34,13 @@ a{
 }
 body{
     color:$clr-font;
-    background:$clr-prim;
     font-family:sans-serif;
 }
 :root{
     --head-height : 80px;
 }
 $padding-lr:20px;
+
 //for header
 @import "header";
 
@@ -49,13 +49,4 @@ $padding-lr:20px;
 @import "section";
 
 //for footer
-footer{
-    padding:$padding-lr;
-    line-height:1.5rem;
-    hr{
-        color:$clr-font;
-    }
-    p{
-        padding:$padding-lr/2;
-    }
-}
+@import "footer";

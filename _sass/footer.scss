@@ -1,0 +1,12 @@
+footer{
+    width:100vw;
+    background:$clr-prim;
+    padding:$padding-lr;
+    line-height:1.5rem;
+    hr{
+        color:$clr-font;
+    }
+    p{
+        padding:$padding-lr/2;
+    }
+}

@@ -1,4 +1,5 @@
 header{
+    background:$clr-prim;
     width:100vw;
     height:var(--head-height);
     display:flex;
@@ -94,10 +95,12 @@ header{
             background:$clr-prim;
             overflow:hidden;
 
-            transition: right 150ms linear;
+            transition: width 150ms linear;
          
                 li{
                     transition: letter-spacing 150ms linear;
+                    padding:$padding-lr;
+
 
                     &:hover{
                         letter-spacing:0.1rem;
@@ -108,6 +111,7 @@ header{
         .open{
             width:70vw;
             padding:$padding-lr;
+
 
         }
 
