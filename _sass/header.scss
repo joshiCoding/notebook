@@ -7,6 +7,7 @@ header{
     padding:0 $padding-lr;
     position:relative;
 
+
     .logo{
         font-size:32px;
         font-weight:bold;
@@ -22,9 +23,11 @@ header{
         background:inherit;
         display:flex;
         align-items:center;
+
         button{
             $bar-width:40px;
             $bar-height:5px;
+            
             width:$bar-width +10px;
             height:$bar-width +10px;
             .menu-bar{
@@ -82,29 +85,33 @@ header{
         
         .menu{
             font-size:1.5rem;
-            padding:$padding-lr;
-            position:absolute;
+            position : absolute;
             top:100%;
-            right:-100%;
-            background:$clr-prim;
-            width:70vw;
+            right:0;
+            display:block;
+            width:0;
             height:calc(100vh - var(--head-height));
+            background:$clr-prim;
+            overflow:hidden;
+
             transition: right 150ms linear;
          
-            ul{
                 li{
-                    padding:$padding-lr;
                     transition: letter-spacing 150ms linear;
+
                     &:hover{
                         letter-spacing:0.1rem;
                     }
 
                 }
-            }
         }
         .open{
-            right:0;
+            width:70vw;
+            padding:$padding-lr;
+
         }
+
+        
     }
 
     
