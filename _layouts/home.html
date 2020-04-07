@@ -1,11 +1,26 @@
 ---
 layout : default
 ---
-<h2>Collection</h2>
+<h2 class = "heading">Collection</h2>
 <br>
 {% for post in site.posts%}
-<a href="{{ post.url | relative_url }}"><h3>{{ post.title }}</h3></a>
+<a href="{{ post.url | relative_url }}" class = "box">
+
+        <div class="title">
+            <h3>{{ post.title }}</h3>
+        </div>
+        <div class="excerpt">
+            {{post.excerpt}}
+            <button>Read More...</button>
+        </div>
+   
+
+</a>
 {% endfor%}
+
+
+
+
 
 
 <style>

@@ -21,6 +21,16 @@ $clr-font:$clr-sec ;
     padding:0;
     box-sizing:border-box;
     list-style:none;
+
+}
+button{
+    border:none;
+    background:none;
+    color:currentColor;
+}
+a{
+    color:currentColor;
+    text-decoration:none;
 }
 body{
     color:$clr-font;
@@ -32,77 +42,11 @@ body{
 }
 $padding-lr:20px;
 //for header
-header{
-    width:100vw;
-    height:var(--head-height);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:0 $padding-lr;
-    position:relative;
-
-    .logo{
-        font-size:32px;
-        font-weight:bold;
-
-        span{
-            background:$clr-comp;
-            border-radius:5px;
-            padding-left:$padding-lr/2;
-        }
-    }
-
-    nav{
-        background:inherit;
-        .menu-bar{
-            transform:rotate(90deg);
-            font-size:25px;
-            font-weight:bolder;
-            cursor:pointer;
-
-        }
-        .menu{
-            font-size:1.5rem;
-            padding:$padding-lr;
-            position:absolute;
-            top:100%;
-            right:-100%;
-            background:$clr-prim;
-            width:70vw;
-            height:calc(100vh - var(--head-height));
-            transition: right 150ms linear;
-         
-            ul{
-                li{
-                    padding:$padding-lr;
-                    transition: letter-spacing 150ms linear;
-                    &:hover{
-                        letter-spacing:0.1rem;
-                    }
-
-                }
-            }
-        }
-        .open{
-            right:0;
-        }
-    }
-
-    
-}
+@import "header";
 
 // for section
-section{
-    padding:$padding-lr*2 $padding-lr;
-    background:$clr-font;
-    color:#2e2e2e;
-    min-height:calc(100vh - var(--head-height));
-    .title{
-        text-align:center;
-        font-size:2rem;
-        color:$clr-prim;
-    }
-}
+
+@import "section";
 
 //for footer
 footer{

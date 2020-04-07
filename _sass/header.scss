@@ -1,14 +1,12 @@
---- 
-
---- 
-
 header{
     width:100vw;
-    height:80px;
+    height:var(--head-height);
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:0 $padding-lr;
+    position:relative;
+
     .logo{
         font-size:32px;
         font-weight:bold;
@@ -19,18 +17,96 @@ header{
             padding-left:$padding-lr/2;
         }
     }
-
+ 
     nav{
-        .menu-bar{
-            transform:rotate(90deg);
-            font-size:25px;
-            font-weight:bolder;
+        background:inherit;
+        display:flex;
+        align-items:center;
+        button{
+            $bar-width:40px;
+            $bar-height:5px;
+            width:$bar-width +10px;
+            height:$bar-width +10px;
+            .menu-bar{
+                font-size:25px;
+                font-weight:bolder;       margin:0 auto;
+ 
+            }
+            .menu-bar-open{
+                width:$bar-width;
+                height:$bar-height;
+                background:$clr-font;
+                position:relative;
+                border-radius:5px;
+                &::before,
+                &::after{
+                    content : '';
+                    background:$clr-font;
+                    position:absolute;
+                    width:$bar-width;
+                    height:$bar-height;
+                    border-radius:5px;
+                    top:-13px;
+                    left:0;
+                    transition:top 150ms linear;
+                }
+                &:after{
+                    top:13px;
+                }
+            }
+            .menu-bar-close{
+                width:$bar-width;
+                height:$bar-height;
+                background:inherit;
+                position:relative;
+                border-radius:5px;
+                &::before,
+                &::after{
+                    content : '';
+                    background:$clr-font;
+                    position:absolute;
+                    width:$bar-width;
+                    height:$bar-height;
+                    border-radius:5px;
+                    top:0;
+                    left:0;
+                    transform:rotate(45deg);
+                    transition: transform 150ms linear;
+                }
+                &:after{
+                    transform:rotate(-45deg);
 
+                }
+            }
         }
+        
         .menu{
-            display:none;
+            font-size:1.5rem;
+            padding:$padding-lr;
+            position:absolute;
+            top:100%;
+            right:-100%;
+            background:$clr-prim;
+            width:70vw;
+            height:calc(100vh - var(--head-height));
+            transition: right 150ms linear;
+         
+            ul{
+                li{
+                    padding:$padding-lr;
+                    transition: letter-spacing 150ms linear;
+                    &:hover{
+                        letter-spacing:0.1rem;
+                    }
+
+                }
+            }
+        }
+        .open{
+            right:0;
         }
     }
 
     
 }
+

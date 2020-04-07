@@ -1,0 +1,52 @@
+//for collection page
+
+section{
+    padding:$padding-lr*2 $padding-lr;
+    background:$clr-font;
+    color:#2e2e2e;
+    min-height:calc(100vh - var(--head-height));
+    .heading{
+        text-align:left;
+        font-size:2rem;
+        color:$clr-prim;
+        margin-left:$padding-lr;
+    }
+    .box{
+        display:block;
+        border : 2px solid $clr-prim;
+        width:80vw;
+        height:auto;
+        margin:$padding-lr;
+        border-radius:10px;
+    
+        .title{
+            text-align:left;
+            font-size:1.5rem;
+            background:$clr-prim;
+            padding:$padding-lr/2;
+            color:$clr-sec;
+        }
+        .excerpt{
+            font-size:1rem;
+            text-align:left;
+            padding:$padding-lr/2;
+            button{
+                color:$clr-prim;
+                font-weight:bold;
+                padding-top:10px;
+                &:hover,
+                &:focus{
+                    color:$clr-comp;
+                }
+            }
+    
+            }
+         
+        &:hover,
+        &:focus{
+            border-color:$clr-comp;
+        }       
+    }    
+     
+    
+}
