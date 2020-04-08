@@ -29,8 +29,13 @@ header{
             $bar-width:40px;
             $bar-height:5px;
             
-            width:$bar-width +10px;
-            height:$bar-width +10px;
+            width:$bar-width +20px;
+            height:$bar-width +20px;
+
+            outline:none;
+            border:none;
+            background:#2067a5;
+            border-radius:50%;
             .menu-bar{
                 font-size:25px;
                 font-weight:bolder;       margin:0 auto;
@@ -98,8 +103,11 @@ header{
             transition: width 150ms linear;
          
                 li{
-                    transition: letter-spacing 150ms linear;
+                    transition: letter-spacing 150ms linear, display 250ms linear;
                     padding:$padding-lr;
+                    display:none;
+
+
 
 
                     &:hover{
@@ -111,6 +119,10 @@ header{
         .open{
             width:70vw;
             padding:$padding-lr;
+            li{
+                display:block;
+
+            }
 
 
         }
