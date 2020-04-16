@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: note
 title: "Creating a new blog post from the netlify app "
 date: 2020-04-16T03:17:02.130Z
 ---
